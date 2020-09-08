@@ -53,9 +53,9 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>hello world - ZJLORD</title>
+<title>1129 recommendation system (25 分) - ZJLORD</title>
 
-<meta name="keywords" content="">
+<meta name="keywords" content="ACM">
 
 <meta name="description " content="">
 <meta name="generator" content="Hexo 5.1.1"></head>
@@ -108,7 +108,19 @@
     <ul>
         <li><a href="/">最新</a></li>
         
-        
+            
+                <li class="active">
+                    <a href="/categories/front-end" data-name="ACM">ACM</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/back-end" data-name="DeepLearn">DeepLearn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
         
         <li class="page-search">
     <form id="search" class="search-form">
@@ -152,38 +164,57 @@
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="post-header">
             <div class="post-author clearfix">
-                <a class="avatar fleft" href="" target="_blank">
-                    <img width="48" src="" alt="avatar"/>
+                <a class="avatar fleft" href="http://www.zjlord.cn" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
-                    <a href="" target="_blank"></a>
-                    <span title="最后编辑于2020-09-08">2020-09-08</span>
+                    <a href="" target="_blank">ZJLORD</a>
+                    <span title="最后编辑于2019-09-07">2019-09-07</span>
                 </p>
                 <p></p>
             </div>
-            <h2 class="post-title">Hello World</h2>
+            <h2 class="post-title">1129 Recommendation System (25 分)</h2>
             <div class="post-meta">
-                本文总共444个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共2735个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <pre><code>   Recommendation system predicts the preference that a user would give to an item. Now you are asked to program a very simple recommendation system that rates the user&#39;s preference by the number of times that an item has been accessed by this user.
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+Input Specification:
+Each input file contains one test case. For each test case, the first line contains two positive integers: N (≤ 50,000), the total number of queries, and K (≤ 10), the maximum number of recommendations the system must show to the user. Then given in the second line are the indices of items that the user is accessing -- for the sake of simplicity, all the items are indexed from 1 to N. All the numbers in a line are separated by a space.
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+Output Specification:
+For each case, process the queries one by one. Output the recommendations for each query in a line in the format:
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+query: rec[1] rec[2] ... rec[K]
+where query is the item that the user is accessing, and rec[i] (i=1, ... K) is the i-th item that the system recommends to the user. The first K items that have been accessed most frequently are supposed to be recommended in non-increasing order of their frequencies. If there is a tie, the items will be ordered by their indices in increasing order.
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+Note: there is no output for the first item since it is impossible to give any recommendation at the time. It is guaranteed to have the output for at least one query.
 
+Sample Input:
+12 3
+3 5 7 5 5 3 2 1 8 3 8 12
+Sample Output:
+5: 3
+7: 3 5
+5: 3 5 7
+5: 5 3 7
+3: 5 3 7
+2: 5 3 7
+1: 5 3 2
+8: 5 3 1
+3: 5 3 1
+8: 3 5 1
+12: 3 5 8</code></pre>
+<p>题意: 推荐系统预测用户对项目的偏好。现在要求您编写一个非常简单的推荐系统，该系统根据用户访问项目的次数对用户的偏好进行评级。<br>分析：使用set&lt;&gt;</p>
+<p>代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct Node&#123;</span><br><span class="line"></span><br><span class="line">    int num,times;</span><br><span class="line">    Node(int num,int times):num(num),times(times)&#123;&#125;;</span><br><span class="line">    bool operator &lt; (const Node &amp;a)const&#123;</span><br><span class="line">        return times!&#x3D;a.times?times&gt;a.times:num&lt;a.num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">set&lt;Node&gt; s;</span><br><span class="line">int Time[50010],n,k;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    while(scanf(&quot;%d%d&quot;,&amp;n,&amp;k)!&#x3D;EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        int x,cnt;</span><br><span class="line">        for(int i&#x3D;0;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line">            if(i)</span><br><span class="line">            &#123;</span><br><span class="line">                cnt&#x3D;0;</span><br><span class="line">                printf(&quot;%d:&quot;,x);</span><br><span class="line">                for(auto it&#x3D;s.begin();it!&#x3D;s.end()&amp;&amp;cnt&lt;k;it++)</span><br><span class="line">                    printf(&quot; %d&quot;,it-&gt;num),cnt++;</span><br><span class="line">                printf(&quot;\n&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            auto it&#x3D; s.find(Node(x,Time[x]));</span><br><span class="line">            if(it!&#x3D;s.end()) s.erase(it);</span><br><span class="line">            Time[x]++;</span><br><span class="line">            s.insert(Node(x,Time[x]));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
         </div>
         
         <div class="post-tags">Tags：
+            
+            <a href="/tags/ACM/">ACM</a>
             
         </div>
         
@@ -199,8 +230,8 @@
      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
      */
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2020/09/08/hello-world/';
-        this.page.identifier = '2020/09/08/hello-world/';
+        this.page.url = 'http://example.com/2019/09/07/1129/';
+        this.page.identifier = '2019/09/07/1129/';
     };
     (function () { // DON'T EDIT BELOW THIS LINE
         var d = document, disqus_shortname = 'zjlord', s = d.createElement('script');

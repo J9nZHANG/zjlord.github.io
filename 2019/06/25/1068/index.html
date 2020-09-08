@@ -53,9 +53,9 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>hello world - ZJLORD</title>
+<title>1068 find more coins - ZJLORD</title>
 
-<meta name="keywords" content="">
+<meta name="keywords" content="ACM">
 
 <meta name="description " content="">
 <meta name="generator" content="Hexo 5.1.1"></head>
@@ -108,7 +108,19 @@
     <ul>
         <li><a href="/">最新</a></li>
         
-        
+            
+                <li class="active">
+                    <a href="/categories/front-end" data-name="ACM">ACM</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/back-end" data-name="DeepLearn">DeepLearn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
         
         <li class="page-search">
     <form id="search" class="search-form">
@@ -152,38 +164,60 @@
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="post-header">
             <div class="post-author clearfix">
-                <a class="avatar fleft" href="" target="_blank">
-                    <img width="48" src="" alt="avatar"/>
+                <a class="avatar fleft" href="http://www.zjlord.cn" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
-                    <a href="" target="_blank"></a>
-                    <span title="最后编辑于2020-09-08">2020-09-08</span>
+                    <a href="" target="_blank">ZJLORD</a>
+                    <span title="最后编辑于2019-06-25">2019-06-25</span>
                 </p>
                 <p></p>
             </div>
-            <h2 class="post-title">Hello World</h2>
+            <h2 class="post-title">1068 Find More Coins</h2>
             <div class="post-meta">
-                本文总共444个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共3286个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <pre><code>Eva loves to collect coins from all over the universe, including some other planets like Mars. One day she visited a universal shopping mall which could accept all kinds of coins as payments. However, there was a special requirement of the payment: for each bill, she must pay the exact amount. Since she has as many as 104 coins with her, she definitely needs your help. You are supposed to tell her, for any given amount of money, whether or not she can find some coins to pay for it.
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+Input Specification:
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+Each input file contains one test case. For each case, the first line contains 2 positive numbers: N (&lt;=104, the total number of coins) and M(&lt;=102, the amount of money Eva has to pay). The second line contains N face values of the coins, which are all positive numbers. All the numbers in a line are separated by a space.
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+Output Specification:
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+For each test case, print in one line the face values V1 &lt;= V2 &lt;= ... &lt;= Vk such that V1 + V2 + ... + Vk = M. All the numbers must be separated by a space, and there must be no extra space at the end of the line. If such a solution is not unique, output the smallest sequence. If there is no solution, output &quot;No Solution&quot; instead.
 
+Note: sequence &#123;A[1], A[2], ...&#125; is said to be &quot;smaller&quot; than sequence &#123;B[1], B[2], ...&#125; if there exists k &gt;= 1 such that A[i]=B[i] for all i &lt; k, and A[k] &lt; B[k].
+
+Sample Input 1:
+8 9
+5 9 8 7 2 3 4 1
+Sample Output 1:
+1 3 5
+Sample Input 2:
+4 8
+7 2 4 3
+Sample Output 2:
+No Solution</code></pre>
+<hr>
+<p>题意： 给你一堆面值不一的硬币，找到一组硬币使其总和为 m ,当出现多组的时候输出排序最小的一组。</p>
+<p>分析: 找硬币的过程实际上是01背包问题，因为每个硬币只有一个，则每个硬币只有两种状态（用和不用）</p>
+<p>那么动态规划的方程为：</p>
+<p>1.f(i,j)=f(i-1,j)   此时 A[i]&gt;j</p>
+<p>2.f(i,j)=max(f(i-1,j),f(i-1,j-A[i])+A[i])</p>
+<p>(f(n,m)为挑选第n个硬币时所能得到的最大面值和)</p>
+<p>找最小答案：</p>
+<p>先将给定的硬币数组按照降序排列。</p>
+<p>每次出现 f(n,m) = f(n-1,m-A[i])+A[i] 时，选择A[i],此时最小。</p>
+<p>代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int n,m;</span><br><span class="line">int A[10020];</span><br><span class="line">int f[10010][101];</span><br><span class="line">bool cmp(int a,int b)</span><br><span class="line">&#123;</span><br><span class="line">    return a&gt;b;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    while(scanf(&quot;%d%d&quot;,&amp;n,&amp;m)!&#x3D;EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int i&#x3D;1;i&lt;&#x3D;n;i++)</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;A[i]);</span><br><span class="line">        sort(A+1,A+n+1,cmp);</span><br><span class="line">        for(int i&#x3D;1;i&lt;&#x3D;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            for(int j&#x3D;1;j&lt;&#x3D;m;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                if(A[i]&gt;j)</span><br><span class="line">                    f[i][j]&#x3D;f[i-1][j];</span><br><span class="line">                else</span><br><span class="line">                    f[i][j]&#x3D;max(f[i-1][j],f[i-1][j-A[i]]+A[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(f[n][m]!&#x3D;m)</span><br><span class="line">            puts(&quot;No Solution&quot;);</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            int t1&#x3D;n;</span><br><span class="line">            int t2&#x3D;m;</span><br><span class="line">            while(t2&gt;0)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F;cout&lt;&lt;&quot;m: &quot;&lt;&lt;m&lt;&lt;endl;</span><br><span class="line">                if(f[t1][t2]&#x3D;&#x3D;f[t1-1][t2-A[t1]]+A[t1])</span><br><span class="line">                &#123;</span><br><span class="line">                    cout&lt;&lt;A[t1];</span><br><span class="line">                    t2-&#x3D;A[t1];</span><br><span class="line">                    t1-&#x3D;1;</span><br><span class="line">                    if(t2!&#x3D;0)</span><br><span class="line">                        cout&lt;&lt;&quot; &quot;;</span><br><span class="line">                &#125;</span><br><span class="line">                else</span><br><span class="line">                    t1-&#x3D;1;</span><br><span class="line">            &#125;</span><br><span class="line">            cout&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
         </div>
         
         <div class="post-tags">Tags：
+            
+            <a href="/tags/ACM/">ACM</a>
             
         </div>
         
@@ -199,8 +233,8 @@
      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
      */
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2020/09/08/hello-world/';
-        this.page.identifier = '2020/09/08/hello-world/';
+        this.page.url = 'http://example.com/2019/06/25/1068/';
+        this.page.identifier = '2019/06/25/1068/';
     };
     (function () { // DON'T EDIT BELOW THIS LINE
         var d = document, disqus_shortname = 'zjlord', s = d.createElement('script');

@@ -53,9 +53,9 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>hello world - ZJLORD</title>
+<title>ZJLORD</title>
 
-<meta name="keywords" content="">
+<meta name="keywords" content="ACM">
 
 <meta name="description " content="">
 <meta name="generator" content="Hexo 5.1.1"></head>
@@ -108,7 +108,19 @@
     <ul>
         <li><a href="/">最新</a></li>
         
-        
+            
+                <li class="active">
+                    <a href="/categories/front-end" data-name="ACM">ACM</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/back-end" data-name="DeepLearn">DeepLearn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
         
         <li class="page-search">
     <form id="search" class="search-form">
@@ -152,38 +164,42 @@
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="post-header">
             <div class="post-author clearfix">
-                <a class="avatar fleft" href="" target="_blank">
-                    <img width="48" src="" alt="avatar"/>
+                <a class="avatar fleft" href="http://www.zjlord.cn" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
-                    <a href="" target="_blank"></a>
-                    <span title="最后编辑于2020-09-08">2020-09-08</span>
+                    <a href="" target="_blank">ZJLORD</a>
+                    <span title="最后编辑于2020-03-28">2020-03-28</span>
                 </p>
                 <p></p>
             </div>
-            <h2 class="post-title">Hello World</h2>
+            <h2 class="post-title"></h2>
             <div class="post-meta">
-                本文总共444个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1835个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+            <p>给定一个单词列表，我们将这个列表编码成一个索引字符串 S 与一个索引列表 A。</p>
+<p>例如，如果这个列表是 [“time”, “me”, “bell”]，我们就可以将其表示为 S = “time#bell#” 和 indexes = [0, 2, 5]。</p>
+<p>对于每一个索引，我们可以通过从字符串 S 中索引的位置开始读取字符串，直到 “#” 结束，来恢复我们之前的单词列表。</p>
+<p>那么成功对给定单词列表进行编码的最小字符串长度是多少呢？</p>
+<p>示例：</p>
+<p>输入: words = [“time”, “me”, “bell”]<br>输出: 10<br>说明: S = “time#bell#” ， indexes = [0, 2, 5] 。
+ </p>
+<p>提示：</p>
+<p>1 &lt;= words.length &lt;= 2000<br>1 &lt;= words[i].length &lt;= 7<br>每个单词都是小写字母 。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/short-encoding-of-words">https://leetcode-cn.com/problems/short-encoding-of-words</a></p>
+<hr>
+<p>字典树(python):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">lambda： 匿名函数</span><br><span class="line">collections.defaultdict()： 字典（类似于dict）,可以接受一个函数作为参数来初始化</span><br><span class="line">dict.__getitem__： 让对象实现迭代功能</span><br><span class="line">reduce(function, iterable[, initializer])函数会对参数序列中元素进行累积。</span><br><span class="line">function -- 函数，有两个参数</span><br><span class="line">iterable -- 可迭代对象</span><br><span class="line">initializer -- 可选，初始参数</span><br><span class="line">Trie &#x3D; lambda: collections.defaultdict(Trie)</span><br><span class="line">        trie &#x3D; Trie()</span><br><span class="line">nodes &#x3D; [reduce(dict.__getitem__, word[::-1], trie)</span><br><span class="line">                 for word in words]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">c++:</span><br><span class="line">class TriesNode&#123;</span><br><span class="line">    TriesNode* children[26];</span><br><span class="line">    public int count;</span><br><span class="line">    TriesNode()</span><br><span class="line">    &#123;</span><br><span class="line">        for(int i&#x3D;0;i&lt;26;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            children[i]&#x3D;NULL;</span><br><span class="line">            count&#x3D;0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    TriesNode* get(char c)</span><br><span class="line">    &#123;</span><br><span class="line">        if(children[c-&#39;a&#39;]&#x3D;&#x3D;NULL)</span><br><span class="line">        &#123;</span><br><span class="line">            children[c-&#39;a&#39;]&#x3D; new TriesNode();</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        return children[c-&#39;a&#39;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    def minimumLengthEncoding(self, words: List[str]) -&gt; int:</span><br><span class="line">        words &#x3D; list(set(words))</span><br><span class="line">        Trie &#x3D; lambda: collections.defaultdict(Trie)</span><br><span class="line">        trie &#x3D; Trie()</span><br><span class="line">        nodes &#x3D; [reduce(dict.__getitem__, word[::-1], trie)</span><br><span class="line">                 for word in words]</span><br><span class="line">        return sum(len(word) + 1</span><br><span class="line">                   for i, word in enumerate(words)</span><br><span class="line">                   if len(nodes[i]) &#x3D;&#x3D; 0)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
         </div>
         
         <div class="post-tags">Tags：
+            
+            <a href="/tags/ACM/">ACM</a>
             
         </div>
         
@@ -199,8 +215,8 @@
      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
      */
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2020/09/08/hello-world/';
-        this.page.identifier = '2020/09/08/hello-world/';
+        this.page.url = 'http://example.com/2020/03/28/tries/';
+        this.page.identifier = '2020/03/28/tries/';
     };
     (function () { // DON'T EDIT BELOW THIS LINE
         var d = document, disqus_shortname = 'zjlord', s = d.createElement('script');

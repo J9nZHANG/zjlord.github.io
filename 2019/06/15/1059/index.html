@@ -53,9 +53,9 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>hello world - ZJLORD</title>
+<title>1059 prime factors - ZJLORD</title>
 
-<meta name="keywords" content="">
+<meta name="keywords" content="ACM">
 
 <meta name="description " content="">
 <meta name="generator" content="Hexo 5.1.1"></head>
@@ -108,7 +108,19 @@
     <ul>
         <li><a href="/">最新</a></li>
         
-        
+            
+                <li class="active">
+                    <a href="/categories/front-end" data-name="ACM">ACM</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/back-end" data-name="DeepLearn">DeepLearn</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
         
         <li class="page-search">
     <form id="search" class="search-form">
@@ -152,38 +164,43 @@
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="post-header">
             <div class="post-author clearfix">
-                <a class="avatar fleft" href="" target="_blank">
-                    <img width="48" src="" alt="avatar"/>
+                <a class="avatar fleft" href="http://www.zjlord.cn" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
-                    <a href="" target="_blank"></a>
-                    <span title="最后编辑于2020-09-08">2020-09-08</span>
+                    <a href="" target="_blank">ZJLORD</a>
+                    <span title="最后编辑于2019-06-15">2019-06-15</span>
                 </p>
                 <p></p>
             </div>
-            <h2 class="post-title">Hello World</h2>
+            <h2 class="post-title">1059 Prime Factors</h2>
             <div class="post-meta">
-                本文总共444个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共2446个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <pre><code>  Given any positive integer N, you are supposed to find all of its prime factors, and write them in the format N = p​1​​​k​1​​​​×p​2​​​k​2​​​​×⋯×p​m​​​k​m​​​​.
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+Input Specification:
+Each input file contains one test case which gives a positive integer N in the range of long int.
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+Output Specification:
+Factor N in the format N = p​1​​^k​1​​*p​2​​^k​2​​*…*p​m​​^k​m​​, where p​i​​&#39;s are prime factors of N in increasing order, and the exponent k​i​​ is the number of p​i​​ -- hence when there is only one p​i​​, k​i​​ is 1 and must NOT be printed out.
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+Sample Input:
+97532468
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+Sample Output:
+97532468=2^2*11*17*101*1291</code></pre>
+<p>题意： 给你一个数，将这个数分解为素数的乘积</p>
+<p>分析: 打一个素数表。</p>
+<p>代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int prime[3000001];</span><br><span class="line">bool vis[3000001];</span><br><span class="line">int cnt;</span><br><span class="line">void init()</span><br><span class="line">&#123;</span><br><span class="line">    cnt&#x3D;0;</span><br><span class="line">    memset(vis,false,sizeof vis );</span><br><span class="line">    for(int i&#x3D;2;i&lt;17000;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(!vis[i])</span><br><span class="line">            prime[cnt++]&#x3D;i;</span><br><span class="line">        for(int j&#x3D;0;j&lt;cnt;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(i*prime[j] &gt;17000)</span><br><span class="line">                break;</span><br><span class="line">            vis[i*prime[j]]&#x3D;true;</span><br><span class="line">            if((i%prime[j])&#x3D;&#x3D;0)</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">long long n;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    init();</span><br><span class="line">    while(scanf(&quot;%lld&quot;,&amp;n)!&#x3D;EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        vector&lt;int&gt; vec;</span><br><span class="line">        int x&#x3D;n;</span><br><span class="line">        int len&#x3D;0;</span><br><span class="line">        while(x!&#x3D;1&amp;&amp;len&lt;cnt)</span><br><span class="line">        &#123;</span><br><span class="line">            if(x%prime[len]&#x3D;&#x3D;0)</span><br><span class="line">            &#123;</span><br><span class="line">                x&#x2F;&#x3D;prime[len];</span><br><span class="line">                vec.push_back(prime[len]);</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">                len++;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;n&lt;&lt;&quot; &quot;;</span><br><span class="line">        if(len&#x3D;&#x3D;cnt&amp;&amp;x!&#x3D;1)</span><br><span class="line">            vec.push_back(x);</span><br><span class="line">        for(int i&#x3D;0;i&lt;vec.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            int cc&#x3D;1;</span><br><span class="line">            while(vec[i]&#x3D;&#x3D;vec[i+1])</span><br><span class="line">            &#123;</span><br><span class="line">                cc++;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            if(cc!&#x3D;1&amp;&amp;i!&#x3D;vec.size()-1)</span><br><span class="line">                printf(&quot;%d^%d*&quot;,vec[i],cc);</span><br><span class="line">            else if(cc!&#x3D;1&amp;&amp;i&#x3D;&#x3D;vec.size()-1)</span><br><span class="line">                printf(&quot;%d^%d\n&quot;,vec[i],cc);</span><br><span class="line">            else</span><br><span class="line">                printf(&quot;%d%c&quot;,vec[i],i!&#x3D;vec.size()-1?&#39;*&#39;:&#39;\n&#39;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
         </div>
         
         <div class="post-tags">Tags：
+            
+            <a href="/tags/ACM/">ACM</a>
             
         </div>
         
@@ -199,8 +216,8 @@
      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
      */
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2020/09/08/hello-world/';
-        this.page.identifier = '2020/09/08/hello-world/';
+        this.page.url = 'http://example.com/2019/06/15/1059/';
+        this.page.identifier = '2019/06/15/1059/';
     };
     (function () { // DON'T EDIT BELOW THIS LINE
         var d = document, disqus_shortname = 'zjlord', s = d.createElement('script');
